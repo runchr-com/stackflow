@@ -10,13 +10,13 @@ When operating within an Antigravity environment, invoke the stackflow pipeline 
 
 ## Step 1: Decision Layer 
 You must decide **what** to build and **validate** the idea.
-1. Invoke `@sf-think "I want to build a ticket-sharing AICC"` to brainstorm the PMF and edge cases, producing a `design-doc.md`.
-2. Invoke `@sf-challenge` to subject the design document to intense business scrutiny, pruning unnecessary features entirely.
+1. Invoke `@sf-think "I want to build a ticket-sharing AICC"` to brainstorm the PMF and edge cases, producing a `design-doc.md`. Major decisions are persisted in `.stackflow/decisions/` (ADR).
+2. Invoke `@sf-challenge` to subject the design document to intense business scrutiny, pruning unnecessary features entirely. Scope cuts are also logged as ADRs.
 
 ## Step 2: Architecture & Environment Layer
 Prepare the blueprint and isolated workspace before code touches your main trunk.
 **(Option A) Granular:** 
-1. Invoke `@sf-plan` to have the technical lead audit architecture, construct a `git worktree`, dump semantic context via AST, and divide work into atomic `task.md`.
+1. Invoke `@sf-plan` to have the technical lead audit architecture (verifying against `.stackflow/decisions/`), construct a `git worktree`, dump semantic context via AST, and divide work into atomic `task.md`.
 
 **(Option B) Fast-Track:**
 1. Invoke `@sf-autoplan` to automate Step 1 (CEO review), UX Review, and Technical Architecture sequentially, immediately spitting out the AST context map and `task.md` in one bound.

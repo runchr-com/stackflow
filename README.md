@@ -31,6 +31,7 @@ You will install Stackflow *globally* so you can use it anywhere. However, your 
 
 * **Global Knowledge**: The `@sf` commands and their behavioral source policies are installed globally into your `~/.gemini/antigravity/skills` configuration. These act simply as the "Rulebooks".
 * **Fierce Local Isolation**: When you run `@sf-think` inside `~/my-project`, the AI uses the global rulebook, but its **memory, context window, and AST mappings** are strictly sandboxed isolated to `~/my-project`. You can simultaneously run Stackflow across multiple projects without cross-contamination.
+* **Project Long-Term Memory (ADR)**: Decisions made by `@sf-think` or `@sf-challenge` are permanently stored inside your local project at `.stackflow/decisions/` as Architecture Decision Records (`0001-...md`). This ensures future agents never hallucinate or revert agreed-upon choices, maintaining perfect continuity even across different chat sessions.
 
 ---
 
